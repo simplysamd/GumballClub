@@ -6,19 +6,10 @@
 	dayjs.extend(utc);
 	dayjs.extend(timezone);
 
-	let date: Date;
-
 	let cdDays: string = '';
 	let cdHours: string = '';
 	let cdMins: string = '';
 	let cdSecs: string = '';
-
-	function onDateChange(event: Event) {
-		const target = event.target as HTMLInputElement;
-		if (target.value) {
-			date = new Date(target.value);
-		}
-	}
 
 	function isPokerNight(date: Date) {
 		return (
@@ -71,9 +62,6 @@
 		cdHours = String(Math.floor((remaining %= 86400000) / 3600000)).padStart(2, '0'); // hours
 		cdMins = String(Math.floor((remaining %= 3600000) / 60000)).padStart(2, '0'); // minutes
 		cdSecs = String(Math.floor((remaining % 60000) / 1000)).padStart(2, '0'); // seconds
-	}
-	function nextPokerNight() {
-		return 'soon';
 	}
 
 	setInterval(pokerNightCountdown, 1000);
