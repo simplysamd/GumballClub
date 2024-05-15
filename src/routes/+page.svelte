@@ -69,8 +69,8 @@
 </script>
 
 {#if cdDays}
-	<h1 class="text-5xl text-cyan-600 text-center mb-4">Gumball Club</h1>
-	<h1 class="text-3xl text-cyan-600 text-center">
-		{cdDays} : {cdHours} : {cdMins} : {cdSecs}
+	<h1 class="text-5xl text-cyan-600 text-center mb-4">The Gumball Club</h1>
+	<h1 class="text-3xl text-cyan-600 text-center font-mono">
+		{cdDays}:{cdHours}:{cdMins}:{cdSecs}
 	</h1>
 {/if}
