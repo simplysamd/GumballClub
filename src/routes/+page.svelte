@@ -77,18 +77,12 @@
 	}
 
 	setInterval(pokerNightCountdown, 1000);
+	pokerNightCountdown();
 </script>
 
 {#if cdDays}
-	<h1 class="text-3xl text-cyan-600">
-		Next meeting of the Gumball Club begins: {cdDays} : {cdHours} : {cdMins} : {cdSecs}
+	<h1 class="text-5xl text-cyan-600 text-center mb-4">Gumball Club</h1>
+	<h1 class="text-3xl text-cyan-600 text-center">
+		{cdDays} : {cdHours} : {cdMins} : {cdSecs}
 	</h1>
 {/if}
-<h1 class="text-red-500">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
-<div class="text-center">
-	<h2>Countdown until next poker night: <span>{nextPokerNight()}</span></h2>
-	<input type="date" class="bg-neutral-900 placeholder-cyan-500" on:change={onDateChange} />
-	<span>date is: {date ? (isPokerNight(date) ? 'POKER NIGHT' : 'lame') : 'select date'}</span>
-</div>
